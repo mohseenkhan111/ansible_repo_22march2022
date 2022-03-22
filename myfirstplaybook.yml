@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: I want to install webserver on ansible nodes
+      apt: 
+        name: apache2
+        state: present
+         
+    - name: Start service httpd, if not running
+      service:
+        name: httpd
+        state: started
