@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: I want to install web apache server in node
+      apt:
+        name: apache2
+        state: present
+        
